@@ -1,0 +1,9 @@
+project: savantenvs/wget2
+target: libwget_bar_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/libwget_bar_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/libwget_bar_fuzzer
+    libfuzzer: true
+    timeout: 10

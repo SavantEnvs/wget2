@@ -1,0 +1,10 @@
+project: savantenvs/wget2
+target: libwget_netrc_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/libwget_netrc_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/libwget_netrc_fuzzer
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/mayhem/libwget_netrc_fuzzer/libwget_netrc_fuzzer.dict

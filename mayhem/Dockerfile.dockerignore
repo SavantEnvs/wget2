@@ -1,0 +1,12 @@
+# Prune build outputs from the build context. .git and the gnulib/ submodule checkout stay in:
+# the image needs the full history, and build.sh bootstraps offline from gnulib/.
+mayhem/build-fuzz
+mayhem/build-test
+ctrf-report.json
+**/*.o
+**/*.lo
+**/*.a
+**/*.la
+**/.libs
+**/.deps
+**/autom4te.cache
